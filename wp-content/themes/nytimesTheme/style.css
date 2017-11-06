@@ -26,6 +26,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
+  margin: 0;
+  font-size: 10;
+  line-height: 1;
+}
+
+p, a {
+  line-height: 1;
 }
 
 h1, .h1,
@@ -37,6 +44,7 @@ h6, .h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
+  line-height: 1;
 }
 
 
@@ -45,7 +53,8 @@ h6, .h6 {
  */
 
 .container {
-  max-width: 60rem;
+  max-width: 900px;
+  min-width: 900px;
 }
 
 
@@ -56,12 +65,15 @@ h6, .h6 {
 .blog-masthead {
   margin-bottom: 3rem;
   background-color: #ffffff;
-  -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
-          box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+  border-bottom: solid 2px rgb(228, 228, 228);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 2;
+}
+
+.kill-margins {
+  margin: 0;
 }
 
 .top-buttons {
@@ -69,7 +81,7 @@ h6, .h6 {
 }
 
 .header-row {
-  margin-bottom: 5px;
+  border-bottom: 2px solid #000;
 }
 
 .header-title {
@@ -78,19 +90,13 @@ h6, .h6 {
 
 .header-title h1{
   font-family:  Old English;
+  font-size: 4em;
+  margin: 0;
 }
 
   .header-title p{
-    font-size:  20px;
-  }
-
-  .first-blog-post-title {
-    font-size:  30px;
-    margin: 0;
-  }
-
-  .first-blog-post-title p {
-    margin: 0;
+    font-size:  15px;
+    margin-bottom: 1em;
   }
 
 .header-title {
@@ -113,7 +119,17 @@ h6, .h6 {
 .nav-row button{
   font-size: 15px;
   padding: 2px;
-  margin-bottom: 3px;
+  margin: 3px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+.nav-row button:hover {
+  background-color: rgb(219, 219, 219);
 }
 
 /* Nav links */
@@ -147,14 +163,15 @@ h6, .h6 {
   border-left: .3rem solid transparent;
 }
 
-.main-body {
-    margin-top: 30px;
-}
-
-
 /*
  * Blog name and description
  */
+
+.main-body {
+  margin-top: 30px;
+  margin: 0;
+  text-align: center;
+}
 
 .blog-header {
   margin-top: 2em;
@@ -178,10 +195,25 @@ h6, .h6 {
   }
 }
 
-
 /*
  * Main column and sidebar layout
  */
+
+ /* breaking new  */
+ .breaking-news h4{
+   font-size: 20px;
+   text-transform: uppercase;
+ }
+
+ .breaking-news a{
+  text-decoration: None;
+  color: #000;
+  font-size: 30px;
+ }
+ 
+  .breaking-news a:hover{
+   text-decoration: underline;
+  }
 
 /* Sidebar modules for boxing content */
 .sidebar-module {
@@ -220,19 +252,31 @@ h6, .h6 {
 
 .blog-post {
   margin-bottom: 4rem;
+  border-bottom: solid 1px #999;
 }
+
+.blog-post p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .blog-post-title {
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .blog-post-meta {
-  margin-bottom: 1.25rem;
+  font-size: 0.8em;
+  margin-bottom: 1rem;
   color: #999;
 }
 
+.first-posts .blog-post p {
+  font-size: 0.9em;
+}
+
 .first-posts {
-  margin: o;
-  overflow: auto;
+  margin-right: 10px;
+  padding: 0;
 }
 
 .first-posts a{
@@ -242,12 +286,81 @@ h6, .h6 {
 }
 
 .main-posts {
+  padding-top: 10px;
   margin: 0;
-  height: 200px;
+  height: 600px;
   overflow: auto;
-
-
 }
+
+.main-posts a{
+  text-decoration: none;
+  color: #000;
+}
+.first-blog-post-title {
+  font-size:  30px;
+  margin: 0;
+}
+
+.first-blog-post-title p {
+  margin: 0;
+}
+
+.first-margin {
+  border-right: solid 1px #999;
+  margin: 0;
+  padding:5px;
+}
+
+.main-story {
+  height: 550px;
+}
+
+.main-story a{
+  color: #000;
+}
+
+.side-cat {
+  border-bottom: 2px #000 solid;
+}
+
+.blog-post h6 a{
+  color: #000;
+}
+
+.side-cat .blog-post {
+  font-size: 15px;
+}
+
+.blog-post a{
+  font-size: 20px;
+  color: #000;
+}
+
+.most-viewed{
+  height: 400px;
+  overflow: auto;
+}
+
+.video-header{
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.show-all-video { 
+  text-align: right;
+}
+
+.video-section {
+  border-bottom: solid 1px #999;
+  border-top: solid 1px #999;
+}
+
+.main-body {
+  margin-top: 180px; 
+}
+
 
 /*
  * Footer
@@ -265,8 +378,9 @@ h6, .h6 {
 }
 
 .post_thumb img{
-  width: 100%;
-  height: 200px;
+  width: auto;
+  height: 300px;
+  overflow: hidden;
   margin-bottom: 8px;
 }
 

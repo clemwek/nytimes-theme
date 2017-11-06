@@ -37,7 +37,6 @@
                video </p>
           </div>
       </div>
-      <hr />
       <div class="nav-row">
           <?php
           $categories = get_categories();
